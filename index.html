@@ -84,6 +84,17 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .catalogo-bg {
+            background-image: url('assets/catalogo_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .catalogo-overlay {
+            background: linear-gradient(to bottom, rgba(17, 21, 24, 0.90) 0%, rgba(17, 21, 24, 0.97) 100%);
+        }
     </style>
 </head>
 
@@ -253,14 +264,15 @@
         </section>
 
         <!-- Catalogo Illusion -->
-        <section id="catalogo" class="py-24 bg-gray-100">
-            <div class="container mx-auto px-6">
+        <section id="catalogo" class="relative py-24 catalogo-bg">
+            <div class="absolute inset-0 catalogo-overlay"></div>
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="mb-16 animate-on-scroll">
-                    <h2 class="text-3xl md:text-5xl font-heading font-bold tracking-tight text-brokian-dark">Comercialización y<br />venta especializada</h2>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold tracking-tight text-white">Comercialización y<br />venta especializada</h2>
                     <div class="w-16 h-1 bg-brokian-accent mt-6 mb-8"></div>
-                    <p class="text-gray-600 max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
+                    <p class="text-gray-300 max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
                         Aunque nos especializamos en las principales categorías industriales, <strong
-                            class="text-brokian-dark">podemos resolver la totalidad de tus necesidades de compra
+                            class="text-white">podemos resolver la totalidad de tus necesidades de compra
                             corporativa</strong>. Gestionamos desde especialidades técnicas hasta urgencias operativas.
                     </p>
                 </div>
